@@ -1,3 +1,6 @@
+#include "TimerManager.h"
+#include "Animation/AnimInstance.h"
+
 void Classname::Functionname()
 {
 	// try and fire a projectile
