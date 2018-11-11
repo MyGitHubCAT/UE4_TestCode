@@ -35,6 +35,6 @@ public:
 	UPROPERTY(EditAnywhere)
 	UBoxComponent* PickupBox; //碰撞盒子（拾取判定）
 
-	UFUNCTION()//定义功能函数
+	UFUNCTION()//定义功能函数名称（名称自定义），函数类型为默认设置，不能修改？参照重载函数。 不同于自定义函数，需要添加FUNCTION（）才能使用
 	void OnPlayerEnterPickupBox(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);//自定义碰撞函数,注意必须与OnComponentBeginOverlap.AddDynamic中提供的类型一致
 };
