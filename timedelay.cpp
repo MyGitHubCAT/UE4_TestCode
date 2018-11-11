@@ -8,7 +8,7 @@ void Classname::Functionname()
 	{
 		bCanfire = false;//更改延迟条件
 		
-		????//添加延时内任意功能
+		????//添加延时内任意功能：计时器（添加在Tick事件下），延时设计，延时移动，延时事件等
 
 		GetWorld()->GetTimerManager().SetTimer(FireDelayTimerHandle, this, &Afirstperson_codeCharacter::ResetFire, 3.0f, false);//计时3.0f(3s)并运行重置函数
 	}
