@@ -13,7 +13,7 @@ class FC_CODE_TEST_API TickOffset : public AActor
 	
 public:	
 	// Sets default values for this actor's properties
-	TickOffset();
+	ATickOffset();
 
 protected:
 	// Called when the game starts or when spawned
