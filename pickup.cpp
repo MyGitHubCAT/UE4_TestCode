@@ -22,8 +22,8 @@ AMyActor::AMyActor()
 	//
 	PickupBox = CreateDefaultSubobject<UBoxComponent>("PickuoBox");
 	PickupBox->SetWorldScale3D(FVector(2, 2, 2));
-	PickupBox->SetGenerateOverlapEvents(true);
-	PickupBox->OnComponentBeginOverlap.AddDynamic(this, &AMyActor::OnPlayerEnterPickupBox);
+	PickupBox->SetGenerateOverlapEvents(true);//设置overlap属性为真，即能够进行overlap判定
+	PickupBox->OnComponentBeginOverlap.AddDynamic(this, &AMyActor::OnPlayerEnterPickupBox);//添加动态beginoverlap事件，发生事件时触发OnPlayerEnterPickupBox功能
 	PickupBox->AttachToComponent(PickupRoot, FAttachmentTransformRules::KeepRelativeTransform);//设置碰撞盒
 	
 
