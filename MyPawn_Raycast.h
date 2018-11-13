@@ -27,8 +27,15 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;//添加映射声明！！！！
 
 	void MyRatcast();//射线声明
-	
+	void MoveForward(float Value);//移动
+	void MoveRight(float Value);
+
 	UPROPERTY(EditAnywhere)
-	UStaticMeshComponent* MyMesh;//增加一个mesh组件
-	
+	USceneComponent* Root;
+
+	UPROPERTY(EditAnywhere)
+	UStaticMeshComponent* MyMesh;
+
+	UPROPERTY(EditAnywhere)
+	class UCameraComponent* Camera;
 };
