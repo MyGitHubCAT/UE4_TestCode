@@ -6,6 +6,7 @@
 #include "Animation/AnimInstance.h"// GetWorld()
 #include "Camera/CameraComponent.h"
 #include "GameFramework/FloatingPawnMovement.h"
+#include "Components/StaticMeshComponent.h"
 
 // Sets default values
 AMyPawn_Raycast::AMyPawn_Raycast()
@@ -18,8 +19,7 @@ AMyPawn_Raycast::AMyPawn_Raycast()
 	Root= CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
 	RootComponent = Root;
 	MyMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MyMesh"));
-	
-	
+	MyMesh->AttachToComponent(Root, FAttachmentTransformRules::KeepRelativeTransform);
 	Camera = CreateDefaultSubobject<UCameraComponent>("MyCamera");
 	Camera->AttachToComponent(Root, FAttachmentTransformRules::KeepRelativeTransform);
 }
